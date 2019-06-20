@@ -18,7 +18,8 @@ app.use(session({
     maxAge: 2592000000 //过期时间，过期后cookie中的 session id 自动删除
   },
   store: new MongoStore({  //将session存储到mongodb
-    url: 'mongodb://localhost:27017/jtdx'  //mongodb 地址
+   // url: 'mongodb://localhost:27017/jtdx'  //mongodb 地址
+    url: 'mongodb://106.13.145.143:27017/jtdx'  //mongodb 地址
   }),
 }))
 
