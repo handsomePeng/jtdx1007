@@ -61,6 +61,9 @@ app.set('port', 3000)
 const server = http.createServer(app)
 
 
-server.listen(3000, () => { console.log('listening on 3000') })
+server.listen({
+  host: '0.0.0.0',
+  port: 3000,
+})
 
 
