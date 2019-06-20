@@ -19,7 +19,7 @@ app.use(session({
   },
   store: new MongoStore({  //将session存储到mongodb
    // url: 'mongodb://localhost:27017/jtdx'  //mongodb 地址
-    url: 'mongodb://106.13.145.143:27017/jtdx'  //mongodb 地址
+    url: 'mongodb://127.0.0.1:27017/jtdx'  //mongodb 地址
   }),
 }))
 

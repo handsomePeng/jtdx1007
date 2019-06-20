@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 //mongoose.connect('mongodb://localhost:27017/jtdx',{ useNewUrlParser: true })
-mongoose.connect('mongodb://106.13.145.143:27017/jtdx',{ useNewUrlParser: true })
+mongoose.connect('mongodb://127.0.0.1:27017/jtdx',{ useNewUrlParser: true })
 
 // 用户
 const userSchema = new mongoose.Schema({
