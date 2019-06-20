@@ -57,14 +57,14 @@ app.use(function(err, req, res, next) {
 
 
 
-app.set('port', 3000)
+app.set('port', 80)
 
 const server = http.createServer(app)
 
 
 server.listen({
   host: '0.0.0.0',
-  port: 3000,
+  port: 80,
 })
 
 
