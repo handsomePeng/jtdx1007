@@ -57,10 +57,10 @@ app.use(function(err, req, res, next) {
 
 
 
-app.set('port', 80)
+app.set('port', 3000)
 
 const server = http.createServer(app)
 
 
-server.listen(80,'0.0.0.0')
+server.listen(3000,'0.0.0.0')
 
