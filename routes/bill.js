@@ -93,7 +93,7 @@ router.get('/queryTypeData', check.checkLogin, (req, res, next) => {
     Model.Bill.find({ status: true }),//已结算总账单
     Model.Bill.find({ payer: payer }),//累计支出账单
     Model.Bill.find({ status: false }),//未结算总账单
-    Model.Bill.find({ status: false,  }),//未结算支出账单
+    Model.Bill.find({ payer: payer, status: false,  }),//未结算支出账单
     Model.Bill.find({ sharer: { $in: [payer] } ,status: false }),// 用户当前尚未结算的账单
   ]).then(result => {
     const closeSumBills = result[0]
