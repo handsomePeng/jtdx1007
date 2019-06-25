@@ -93,14 +93,11 @@ router.get('/signOut', check.checkLogin, (req, res, next) => {
 // 获取当前用户的信息
 router.get('/getUserInfo', check.checkLogin, (req, res, next) => {
   const name = req.session.user.name
-  console.log(req.session)
 
   Model.User.findOne({ name: name }).then(userInfo => {
     responseData.code = responseCode.normalCode
     let user = userInfo.toObject()
-    console.log(user)
     delete user.password
-    console.log(user)
     responseData.data = user
     responseData.desc = '成功'
     res.json(responseData)

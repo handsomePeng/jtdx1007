@@ -102,7 +102,6 @@ router.get('/queryTypeData', check.checkLogin, (req, res, next) => {
     const unClosePayBills = result[3]
     const userUnCloseBills = result[4]
 
-    console.log(userUnCloseBills)
     // 已结算总数
     let closeSum = closeSumBills.reduce((total, item, index, arr) => {
       return total + (+item.num)
@@ -144,6 +143,78 @@ router.get('/queryTypeData', check.checkLogin, (req, res, next) => {
     responseData.desc = '成功'
     res.json(responseData)
   })
+})
+
+// 查询账单
+router.post('/queryBillList', check.checkLogin, (req, res, next) =>{
+  const payer = req.body.payer || undefined
+  const sharer = req.body.sharer || undefined
+  const changer = req.body.changer || undefined
+  const remark = req.body.remark || undefined
+  const startTimes = req.body.startTimes || undefined
+  const endTimes = req.body.endTimes || undefined
+  const status = req.body.status || undefined
+  const currentPage = +req.body.currPage || 1 // 当前页
+  const pageSize = +req.body.pageSize || 10 // 每页条数
+  let skip = (currentPage - 1)*pageSize // 跳过的条数
+
+  //查询条件
+  const query = {}
+  // 支付人
+  if (payer) {
+    query.payer =  payer
+  }
+  // 结算人
+  if (changer) {
+    query.changer =  changer
+  }
+  // 备注模糊匹配
+  if (remark) {
+    query.remark =  new  RegExp(remark)
+  }
+  // 结算状态
+  if (status != undefined) {
+    query.status =  status
+  }
+  // 承担人
+  if (sharer) {
+    query.sharer =  { $in: [payer] }
+  }
+  // 花费时间===>时间范围筛选
+  let timeRound = {}
+  if (startTimes) {
+    timeRound['$gte'] =  startTimes
+    query.date = timeRound
+  }
+  if (endTimes) {
+    timeRound['$lt'] =  endTimes
+    query.date = timeRound
+  }
+
+
+
+  console.log(query)
+  // 当前查询条件下的总数
+  Model.Bill.find(query).then(count => {
+    let total = count.length
+    // 条件查训结果 ===> 时间排序 ===> 跳过skip条/查询偏移量 ===> 只返回pageSize条
+    Model.Bill
+      .find(query)
+      .sort({date: -1})
+      .skip(skip)
+      .limit(pageSize)
+      .then(result => {
+        responseData.code = responseCode.normalCode
+        responseData.desc = '账单列表查询'
+        responseData.data = result
+        responseData.currentPage = currentPage
+        responseData.pageSize = pageSize
+        responseData.total = total
+        res.json(responseData)
+    })
+  })
+
+
 })
 
 

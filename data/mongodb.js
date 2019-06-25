@@ -19,7 +19,7 @@ const billSchema = new mongoose.Schema({
     required: [true, '账单金额不能为空'],
   },
   date: {
-    type: Date,
+    type: String,
     required: [true, '花费日期不能为空']
   },
   remark: String,
