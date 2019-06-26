@@ -195,8 +195,9 @@ router.post('/queryBillList', check.checkLogin, (req, res, next) =>{
 
   console.log(query)
   // 当前查询条件下的总数
-  Model.Bill.find(query).then(count => {
-    let total = count.length
+  Model.Bill.find(query).countDocuments((error, count) => {
+    console.log(count)
+    let total = count
     // 条件查训结果 ===> 时间排序 ===> 跳过skip条/查询偏移量 ===> 只返回pageSize条
     Model.Bill
       .find(query)
