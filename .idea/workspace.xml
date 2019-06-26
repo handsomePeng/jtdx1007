@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c052ae7-af3f-4fe4-b729-084fdf4f302d" name="Default Changelist" comment="" />
+    <list default="true" id="5c052ae7-af3f-4fe4-b729-084fdf4f302d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -23,14 +25,16 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="js" value="12" />
+          <entry key="html" value="1" />
+          <entry key="js" value="14" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="HTML" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="12" />
+          <entry key="JavaScript" value="14" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -38,14 +42,14 @@
         <counts>
           <entry key="js" value="6386" />
           <entry key="json" value="21" />
-          <entry key="txt" value="10" />
+          <entry key="txt" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="21" />
           <entry key="JavaScript" value="6386" />
-          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="PLAIN_TEXT" value="13" />
         </counts>
       </usages-collector>
     </session>
@@ -56,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/data/mongodb.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#239#340#0" />
                 <element signature="e#388#862#0" />
@@ -133,22 +137,20 @@
             <path>
               <item name="jtdxApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="jtdxApp" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jtdxApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="jtdxApp" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jtdxApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="jtdxApp" type="462c0819:PsiDirectoryNode" />
-              <item name="middlewares" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jtdxApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jtdxApp" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="app.a2c6787cc71724a9f25f.js" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -193,7 +195,7 @@
       <updated>1560842032668</updated>
       <workItem from="1560842033949" duration="48332000" />
       <workItem from="1561443154467" duration="14058000" />
-      <workItem from="1561527805667" duration="2223000" />
+      <workItem from="1561527805667" duration="3032000" />
     </task>
     <task id="LOCAL-00001" summary="ii">
       <created>1561014361999</created>
@@ -286,14 +288,29 @@
       <option name="project" value="LOCAL" />
       <updated>1561529565066</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="增加账单列表功能">
+      <created>1561538153322</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1561538153322</updated>
+    </task>
+    <task id="LOCAL-00015" summary="web">
+      <created>1561542004238</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1561542004238</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64613000" />
+    <option name="totallyTimeSpent" value="65422000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09173334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -327,7 +344,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ii" />
     <MESSAGE value="增加账单列表功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加账单列表功能" />
+    <MESSAGE value="web" />
+    <option name="LAST_COMMIT_MESSAGE" value="web" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package-lock.json">
@@ -390,10 +408,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/app.cd7aa9735b9c0ab05dfe.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/app.a2c6787cc71724a9f25f.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/mongodb.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#239#340#0" />
             <element signature="e#388#862#0" />
