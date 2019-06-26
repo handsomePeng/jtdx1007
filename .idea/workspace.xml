@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c052ae7-af3f-4fe4-b729-084fdf4f302d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5c052ae7-af3f-4fe4-b729-084fdf4f302d" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -26,7 +24,7 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="14" />
+          <entry key="js" value="15" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
@@ -34,7 +32,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="14" />
+          <entry key="JavaScript" value="15" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -150,7 +148,7 @@
               <item name="jtdxApp" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="app.a2c6787cc71724a9f25f.js" type="620a8d5e:NestingTreeNode" />
+              <item name="app.4af3d089a3fc3c24bb20.js" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -195,7 +193,7 @@
       <updated>1560842032668</updated>
       <workItem from="1560842033949" duration="48332000" />
       <workItem from="1561443154467" duration="14058000" />
-      <workItem from="1561527805667" duration="3032000" />
+      <workItem from="1561527805667" duration="3701000" />
     </task>
     <task id="LOCAL-00001" summary="ii">
       <created>1561014361999</created>
@@ -302,11 +300,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561542004238</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="web">
+      <created>1561542196297</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1561542196297</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65422000" />
+    <option name="totallyTimeSpent" value="66091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -415,6 +420,9 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/app.a2c6787cc71724a9f25f.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/app.4af3d089a3fc3c24bb20.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/mongodb.js">
