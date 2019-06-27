@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c052ae7-af3f-4fe4-b729-084fdf4f302d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/bill.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/bill.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,7 +26,7 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="html" value="1" />
-          <entry key="js" value="20" />
+          <entry key="js" value="22" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
@@ -35,7 +34,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="20" />
+          <entry key="JavaScript" value="22" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -93,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/routes/bill.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="274" lean-forward="true" selection-start-line="274" selection-end-line="274" />
+              <caret line="274" selection-start-line="274" selection-end-line="274" />
               <folding>
                 <element signature="e#288#352#0" />
                 <element signature="e#1742#2082#0" />
@@ -179,6 +178,24 @@
               <item name="jtdxApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="jtdxApp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jtdxApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jtdxApp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jtdxApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jtdxApp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jtdxApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jtdxApp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="app.24b991cb03c9b233e486.js" type="620a8d5e:NestingTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -222,7 +239,7 @@
       <updated>1560842032668</updated>
       <workItem from="1560842033949" duration="48332000" />
       <workItem from="1561443154467" duration="14058000" />
-      <workItem from="1561527805667" duration="13838000" />
+      <workItem from="1561527805667" duration="14619000" />
     </task>
     <task id="LOCAL-00001" summary="ii">
       <created>1561014361999</created>
@@ -343,11 +360,25 @@
       <option name="project" value="LOCAL" />
       <updated>1561543005777</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="web">
+      <created>1561617342302</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1561617342302</updated>
+    </task>
+    <task id="LOCAL-00019" summary="web">
+      <created>1561617750414</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1561617750414</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76228000" />
+    <option name="totallyTimeSpent" value="77009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -441,7 +472,7 @@
     <entry file="file://$PROJECT_DIR$/routes/bill.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="274" lean-forward="true" selection-start-line="274" selection-end-line="274" />
+          <caret line="274" selection-start-line="274" selection-end-line="274" />
           <folding>
             <element signature="e#288#352#0" />
             <element signature="e#1742#2082#0" />
@@ -471,6 +502,12 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/app.7500cf7478d6f8c71a96.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/app.24b991cb03c9b233e486.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
