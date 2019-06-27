@@ -3,6 +3,7 @@ const router = express.Router()
 const Model = require('../data/mongodb')
 const responseCode =  require('../config/responseCode')
 const check = require('../middlewares/check')
+const ObjectId = require('mongoose').Types.ObjectId
 
 
 // 所有请求都要经过这一步，统一请求返回的数据格式
@@ -19,11 +20,11 @@ router.use((req, res, next) => {
 // 定义时间格式
 const date = new Date(),
   yy = date.getFullYear(),
-  MM = date.getMonth() + 1,
-  dd = date.getDate(),
-  hh = date.getHours(),
-  mm = date.getMinutes(),
-  ss = date.getSeconds()
+  MM = (date.getMonth() + 1) >= 10 ? (date.getMonth() + 1) : ('0'+(date.getMonth() + 1)),
+  dd = (date.getDate() + 1) >= 10 ? (date.getDate() + 1) : ('0'+(date.getDate() + 1)),
+  hh = (date.getHours() + 1) >= 10 ? (date.getHours() + 1) : ('0'+(date.getHours() + 1)),
+  mm = (date.getMinutes() + 1) >= 10 ? (date.getMinutes() + 1) : ('0'+(date.getMinutes() + 1)),
+  ss = (date.getSeconds() + 1) >= 10 ? (date.getSeconds() + 1) : ('0'+(date.getSeconds() + 1))
 
 const  time = yy + '-' + MM + '-' + dd + ' ' + hh + ':' + mm + ':' + ss
 
@@ -41,7 +42,7 @@ router.post('/add', check.checkLogin, (req, res, next) => {
     responseData.desc = '账单金额不能为空'
     return res.json(responseData)
   }
-  if (typeof(num) != 'number') {
+  if (typeof(num) !== 'number') {
     responseData.code = responseCode.paramsErrorCode
     responseData.desc = '账单金额必须为数字'
     return res.json(responseData)
@@ -191,9 +192,6 @@ router.post('/queryBillList', check.checkLogin, (req, res, next) =>{
     query.date = timeRound
   }
 
-
-
-  console.log(query)
   // 当前查询条件下的总数
   Model.Bill.find(query).countDocuments((error, count) => {
     console.log(count)
@@ -201,7 +199,7 @@ router.post('/queryBillList', check.checkLogin, (req, res, next) =>{
     // 条件查训结果 ===> 时间排序 ===> 跳过skip条/查询偏移量 ===> 只返回pageSize条
     Model.Bill
       .find(query)
-      .sort({date: -1})
+      .sort({createTime: -1})
       .skip(skip)
       .limit(pageSize)
       .then(result => {
@@ -214,6 +212,81 @@ router.post('/queryBillList', check.checkLogin, (req, res, next) =>{
         res.json(responseData)
     })
   })
+
+
+})
+
+// 查询账单详情
+router.get('/detail', check.checkLogin, (req, res, next) => {
+  const id = req.query.id
+  console.log(id)
+
+  // 判断id是否为空
+  if (!id) {
+    responseData.code = responseCode.paramsErrorCode
+    responseData.desc = '账单id不能为空'
+    return res.json(responseData)
+  }
+
+  Model.Bill.findOne({ '_id': ObjectId(id) }).then(result => {
+    responseData.code = responseCode.normalCode
+    responseData.desc =  '成功'
+    let bill = result.toObject()
+    delete bill.average
+    responseData.data = bill
+    res.json(responseData)
+  })
+
+
+})
+
+// 账单修改
+router.post('/update', check.checkLogin, (req, res, next) => {
+  const payer = req.session.user.name
+  const num = +req.body.num
+  const date = req.body.date
+  const sharer = req.body.sharer.split(',')
+  const remark = req.body.remark
+  const id = req.body.id
+
+  if (!num) {
+    responseData.code = responseCode.paramsErrorCode
+    responseData.desc = '账单金额不能为空'
+    return res.json(responseData)
+  }
+  if (typeof(num) !== 'number') {
+    responseData.code = responseCode.paramsErrorCode
+    responseData.desc = '账单金额必须为数字'
+    return res.json(responseData)
+  }
+  if (!sharer.length) {
+    responseData.code = responseCode.paramsErrorCode
+    responseData.desc = '账单承担人不能为空'
+    return res.json(responseData)
+  }
+
+  let bill = {
+    num: num,
+    date: date,
+    sharer: sharer,
+    remark: remark,
+    average: num/sharer.length, //账单均分金额
+  }
+
+  Model.Bill.findOne({ '_id': ObjectId(id) }).then(result => {
+    if (!result || payer !== result.payer) {
+      responseData.code = responseCode.permissionErrorCode
+      responseData.desc = '当前用户无权修改本条数据'
+      return res.json(responseData)
+    }
+    Model.Bill.update({ '_id': ObjectId(id), payer: payer }, { $set: bill}).then(data => {
+      responseData.code = responseCode.normalCode
+      responseData.desc = '更新成功'
+      return res.json(responseData)
+    })
+
+  })
+
 
 
 })
